@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 13px;
+}
+P,li,span, strong, a {
+    font-size: 14px;
+}
+.section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.section-heading .heading {
+    font-size: 50px;
+}
+.section-heading .description {
+    font-size: 20px;
+}
+
+.row-container {
+    display: flex;
+    /* gap: 15px; */
+}
+.column {
+    width: calc(100%/4);
+    flex: 0 0 calc(100%/4);
+    padding: 7px;
+}
+.column-container {
+    border: 1px solid #dfdfdf;
+    padding: 16px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.feature-heading {
+    font-size: 26px;
+}
+.feature_description {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #817474;
+}
+.read-more {
+    background: #2d2db3;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.primary-button {
+    background: #333;
+    padding: 20px 25px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px 20px;
+    transition: all 0.3s ease;
+}
+.primary-button:hover {
+    background: #555;
+    border-radius: 20px 10px;
+}
+.primary-button:active {
+    transform: scale(1.2);
+}
+.primary-button:focus {
+    outline: 4px solid red;
+}
+
+.link-list li:first-child {
+    background: red;
+}
+.link-list li:last-child {
+    background: #333;
+}   
+.link-list-1 li:nth-child(2n+2) {
+    background: #333;
+    border-radius: 5px;
+    padding: 9px;
+}
+.link-list-1 li:nth-child(2n+2) a {
+    color: #fff;
+}
+a.primary-button::after {
+    content: 'Amit';
+    background: #fff;
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-left: 9px;
+}
+a.primary-button::before {
+    content: 'Live now';
+    background: #e2e0e0;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-right: 9px;
+    color: #000;
+}
+ul.link-list {
+    list-style: none;
+}
+ul.link-list li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #333;
+    display: inline-block;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.select-first-letter::first-letter {
+    font-size: 30px;
+    background: #333;
+    color: #fff;
+    width: 64px;
+    display: inline-block;
+}
+.select-first-letter::first-line {
+    background: #333;
+}
+@media (min-width: 800px) {
+    .read-more {
+        background-color: red;
+    }
+     .feature_description {
+        color: red;
+    }
+    
+}
+
+@media (max-width: 991px) {
+    .row-container {
+        flex-wrap: wrap;
+    }
+    .column {
+        width: calc(100%/2);
+        flex: 0 0 calc(100%/2);
+    }
+}
+
+@media (max-width: 549px) {
+   
+    .column {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+    .section-heading .heading {
+        font-size: 30px;
+    }
+}
+@media (min-width: 991px) {
+
+}
+@media (max-width: 768px) {
+    
+}
+
+

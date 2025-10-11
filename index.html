@@ -1,124 +1,203 @@
-<html>
-    <head>
-        <title>My Web Page</title> 
-        <link rel="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet"  href="./style.css">
-      
-    </head>
-    <body>
-        <h2>Form element demo</h2>
-        
-        <div class="form_container">
-            <form action="/action_page.php">
-                <div class="form_group">
-                    <label for="fname">First name:</label><br>
-                    <input class="form-control" type="text" id="fname" name="fname" value="John">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniCon MVP - Location Setup</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Content Area - Form -->
+        <main class="main-content">
+            <!-- Logout Button -->
+            <div class="logout-container">
+                <button class="logout-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H6" stroke="#4e4f52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 11.3333L14 7.33333L10 3.33333" stroke="#4e4f52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 7.33333H6" stroke="#4e4f52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Logout
+                </button>
+            </div>
+
+            <!-- Form Content -->
+            <div class="form-wrapper">
+                <div class="welcome-section">
+                    <h1>Welcome to UniCon! ✨</h1>
+                    <p>The world of effortless marketplace management awaits. Just a quick setup to start your multichannel journey, effortlessly.</p>
                 </div>
-                <div class="form_group">
-                    <label for="lname">Last name:</label><br>
-                    <input class="form-control" type="text" id="lname" name="lname" value="Doe">
-                </div>
-                <div class="form_group">
-                    <label for="country">Country:</label><br>
-                    <select class="form-control" id="country" name="country">
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                    </select>
-                </div>
-                <div class="form_group">
-                    <label for="subject">Subject:</label><br>
-                    <textarea class="form-control" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                </div>
-                <div class="form_group">
-                    <label for="birthday">Birthday:</label><br>
-                    <input class="form-control" type="date" id="birthday" name="birthday">
-                </div>
-                <div class="form_group">
-                    <div class="input_gender">
-                        <label for="male">Male</label>
-                        <input class="form-control-radio" type="radio" name="gender" id="male" >
+
+                <div class="form-card">
+                    <div class="form-header">
+                        <h2>Where are You Located?</h2>
+                        <p>Set the country and currency of your operation so that we can tailor the experience to your location.</p>
                     </div>
 
-                    <div class="input_gender">
-                        <label for="female">Female</label>
-                        <input class="form-control-radio" id="female" type="radio" name="gender"  >
-                    </div>
+                    <div class="divider"></div>
 
+                    <form class="location-form">
+                        <!-- Country Field -->
+                        <div class="form-group">
+                            <label class="form-label">
+                                Country <span class="required">*</span>
+                            </label>
+                            <div class="select-container">
+                                <select class="form-select" required>
+                                    <option value="">Choose a Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                    <option value="IN">India</option>
+                                    <option value="AU">Australia</option>
+                                </select>
+                                <div class="select-arrow">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="#70747e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone Field -->
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <div class="phone-input-container">
+                                <div class="country-code">
+                                    <span>+91</span>
+                                    <div class="separator"></div>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="#70747e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <input type="tel" class="phone-input" placeholder="Enter your phone number">
+                            </div>
+                        </div>
+
+                        <!-- Time Zone and Currency Row -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Time Zone <span class="required">*</span>
+                                </label>
+                                <div class="select-container">
+                                    <select class="form-select" required>
+                                        <option value="">Select Time Zone</option>
+                                        <option value="UTC-12">UTC-12 (Baker Island)</option>
+                                        <option value="UTC-11">UTC-11 (American Samoa)</option>
+                                        <option value="UTC-10">UTC-10 (Hawaii)</option>
+                                        <option value="UTC-9">UTC-9 (Alaska)</option>
+                                        <option value="UTC-8">UTC-8 (Pacific Time)</option>
+                                        <option value="UTC-7">UTC-7 (Mountain Time)</option>
+                                        <option value="UTC-6">UTC-6 (Central Time)</option>
+                                        <option value="UTC-5">UTC-5 (Eastern Time)</option>
+                                        <option value="UTC-4">UTC-4 (Atlantic Time)</option>
+                                        <option value="UTC-3">UTC-3 (Brazil)</option>
+                                        <option value="UTC-2">UTC-2 (Mid-Atlantic)</option>
+                                        <option value="UTC-1">UTC-1 (Azores)</option>
+                                        <option value="UTC+0">UTC+0 (GMT)</option>
+                                        <option value="UTC+1">UTC+1 (CET)</option>
+                                        <option value="UTC+2">UTC+2 (EET)</option>
+                                        <option value="UTC+3">UTC+3 (MSK)</option>
+                                        <option value="UTC+4">UTC+4 (Gulf)</option>
+                                        <option value="UTC+5">UTC+5 (Pakistan)</option>
+                                        <option value="UTC+5:30">UTC+5:30 (India)</option>
+                                        <option value="UTC+6">UTC+6 (Bangladesh)</option>
+                                        <option value="UTC+7">UTC+7 (Thailand)</option>
+                                        <option value="UTC+8">UTC+8 (China)</option>
+                                        <option value="UTC+9">UTC+9 (Japan)</option>
+                                        <option value="UTC+10">UTC+10 (Australia)</option>
+                                        <option value="UTC+11">UTC+11 (Solomon Islands)</option>
+                                        <option value="UTC+12">UTC+12 (New Zealand)</option>
+                                    </select>
+                                    <div class="select-arrow">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#70747e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Currency <span class="required">*</span>
+                                </label>
+                                <div class="select-container">
+                                    <select class="form-select" required>
+                                        <option value="">Choose a Currency</option>
+                                        <option value="USD">USD - US Dollar</option>
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - British Pound</option>
+                                        <option value="CAD">CAD - Canadian Dollar</option>
+                                        <option value="AUD">AUD - Australian Dollar</option>
+                                        <option value="JPY">JPY - Japanese Yen</option>
+                                        <option value="CHF">CHF - Swiss Franc</option>
+                                        <option value="CNY">CNY - Chinese Yuan</option>
+                                        <option value="INR">INR - Indian Rupee</option>
+                                        <option value="BRL">BRL - Brazilian Real</option>
+                                    </select>
+                                    <div class="select-arrow">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#70747e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Progress and Navigation -->
+                <div class="form-footer">
+                    <div class="progress-indicator">
+                        <div class="progress-dots">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
                     
-
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M12.5 15L7.5 10L12.5 5" stroke="#1c2433" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Back
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 5L12.5 10L7.5 15" stroke="#1c2433" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M12.5 15L7.5 10L12.5 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Continue
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 5L12.5 10L7.5 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-                <input type="submit" class="submit" value="Submit">
-            </form>
-        </div>
-
-        <hr/>
-        <p>gsjdgff sdgf</p>
-        <p>hfgdsfj hgsdfhgdsfj</p>
-        <strong>Textdbdfbks dsjgfkjds</strong><span>sdjfgkjsdf</span>
-        <h1 style="width: 450px; background-color: #333; color: #fff;">test</h1>
-        <h2>test1</h2>
-        <h3>test1</h3>
-        <h4>test1</h4>
-        <h5>test1</h5>
-        <h6>test1</h6>
-        <p>1. ksfsdf</p>
-        <p>2. ksfsdf</p>
-        <p>3. ksfsdf</p>
-        <p>4. ksfsdf</p>
-        <p>5. ksfsdf</p>
-        <ul type="squire" style="background-color: #e4e4e4; padding: 15px; border: 1px solid #e4e4e4; width: 400px; margin-left: auto; margin-right: auto;">
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
-            <li>item4</li>
-            <li>item5</li>
-        </ul>
-        <ol type="i">
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
-            <li>item4</li>
-            <li>item5</li>
-        </ol>
-        <a target="" href="https://jiffytechsolutions.com/">Google</a>
-        <!-- <link href="https://www.google.com">Google</link> -->
-         <div class="image_content">
+            </div>
+        </main>
         
-        <p>
-            <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" width="104" height="142" />
-            loremIpsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-        </div>
-        <div class="form_content">
-            <h3>Input form demo</h3>
-            <form>
-               
-                <div class="input-group">
-                    <label for="fname">First name:</label>
-                    <input id="fname" type="text" value="" placeholder="Enter First name" />
+        <!-- Sticky Right Panel - Image -->
+        <aside class="sticky-panel">
+            <div class="image-container">
+                <div class="placeholder-image">
+                    <div class="image-content">
+                        <h3>UniCon Platform</h3>
+                        <p>Effortless marketplace management</p>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="lname">Last name:</label>
-                    <input type="text" id="lname" value="" placeholder="Enter last name" />
-                </div>
-                <div class="input-group">
-                    <label for="username">User name:</label>
-                    <input type="text" id="username" value="" placeholder="Enter user name" />
-                </div>
-               <input type="radio" id="radio1" name="radioGroup" checked />
-               <label for="radio1">Male</label>
-                <input type="radio" id="radio2" name="radioGroup" />
-                <label for="radio2">Female</label>
-                <div class="input-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" value="" placeholder="Enter password" />
-                </div>
-                <input type="submit" value="Submit" />
-                <input type="reset" value="Reset" />
-            </form>
-        </div>
-        
-    </body>
+            </div>
+        </aside>
+    </div>
+</body>
 </html>
